@@ -1,0 +1,10 @@
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\bin\Debug\SpeedRead.exe.config
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\bin\Debug\SpeedRead.exe
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\bin\Debug\SpeedRead.pdb
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.csprojAssemblyReference.cache
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.Form1.resources
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.Properties.Resources.resources
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.csproj.GenerateResource.cache
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.csproj.CoreCompileInputs.cache
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.exe
+C:\Users\GeorgeT\Desktop\SpeedRead\SpeedRead\obj\Debug\SpeedRead.pdb
