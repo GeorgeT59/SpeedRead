@@ -9,12 +9,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
-using System.Timers;
 
 namespace SpeedRead
 {
     public partial class Form1 : Form
     {
+        bool status = true;
+
         public Form1()
         {
             InitializeComponent();
@@ -29,10 +30,11 @@ namespace SpeedRead
         {
             MessageBox.Show(@"The average person reads 300 WPM, but this can be increased to 400 " + "\r\n" +
                 "or even 500 by removing the need to move your eyes. That's where SpeedRead comes in." + "\r\n" +
-"\r\n" + "Just copy and paste the text into the textbox below and it'll display each word allowing you to read faster.", "About this program.");
+"\r\n" + "Just copy and paste the text into the textbox below and it'll display each word allowing you to read faster." + "\r\n" + "\r\n" +
+"Version 2.0", "About this program.");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_ClickAsync(object sender, EventArgs e)
         {
             string messageBox = textBox1.Text;
 
@@ -40,11 +42,26 @@ namespace SpeedRead
 
             string[] split = messageBox.Split(' ');
 
+            int speed;
+
+            if (trackBar1.Value == 0)
+                speed = 400;
+            else if (trackBar1.Value == 1)
+                speed = 200;
+            else
+                speed = 100;
+
             for (int i = 0; i < split.Length; i++)
             {
                     label2.Text = split[i];
-                    Task.Delay(200).Wait();
+                    await Task.Delay(speed);
+                if (status == false)
+                {
+                    break;
+                }
             }
+
+            status = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -65,6 +82,11 @@ namespace SpeedRead
         private void button3_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/GeorgeT59");
+        }
+
+        public void button4_Click(object sender, EventArgs e)
+        {
+            status = false;
         }
     }
 }
